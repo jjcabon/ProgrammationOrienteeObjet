@@ -1,4 +1,4 @@
-OBJECT ORIENTEDV PROGRAMMING
+OBJECT ORIENTED PROGRAMMING
 
 exercice 1 
 Définir une classe identité telle que:
@@ -82,5 +82,6 @@ et qui admet les méthodes suivantes:
 	__sub__  qui calcule la différence entre deux horaires 
 	
 consulter la classe datetime de python
+
 
 
