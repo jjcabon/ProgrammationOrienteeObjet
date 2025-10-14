@@ -11,7 +11,7 @@ class ClasseDeLycee:
         self.numero = numero
         self.eleves
     def __str__(self):
-        return f"Classede{self.nom}{self.numero}avec des eleves{self.eleves}"
+        return f"Classe de{self.nom}{self.numero}avec des eleves{self.eleves}"
     
     
 term1= ClasseDeLycee()
@@ -33,4 +33,5 @@ print(seconde1.nom)
 print(seconde1.eleves)
 print(seconde1.eleves[1][3])
 print(term1)
+
 print(seconde1)
