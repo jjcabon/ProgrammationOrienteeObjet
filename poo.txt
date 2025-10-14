@@ -1,0 +1,86 @@
+OBJECT ORIENTEDV PROGRAMMING
+
+exercice 1 
+Définir une classe identité telle que:
+si on tape
+ hugo=Identite('Dupont','Hugo',1995)
+ hugo.nom
+ hugo.prenom
+ hugo.an
+ hugo.age(2025)
+ 
+ on obtient:
+ Dupont
+ Hugo
+ 1995
+ 30
+ Que représentent nom,prenom,an et age?
+ 
+ exercice 2
+ définir une classe Voiture telle que si on tape:
+ F340=Voiture(4Ferrari','Blanche',90)
+ print(F340)
+  affiche: ' marque Ferrari de couleur Blanche de puissance 90 cv '
+  
+ exercice 3 
+ 
+ class Special:
+			def __init__(self,a,b,c):
+					self.a=a
+					self.b=b
+					self.c=c
+			def order(self):
+
+			
+			def issquare(self):
+				if a*a + b*b == c*c :
+					return True 
+				else:
+				return False
+				
+Nommer a,b,c ,__init__, order et issquare.
+
+Compléter order pour que a,b,c soient ordonnés du plus petit au plus grand
+
+Modifier issquare pour n'utiliser qu'une instruction
+
+t=Special(4,5,3)
+t.issquare()
+Qu'est ce qui sera affiché? 
+Comment modifier ces instructions?
+Commenter le code 
+
+
+
+exercice 4:
+
+import random
+
+class Piece:
+		def alea(self):
+			return random.randint(0,1)
+			
+		def moyenne(self,n):
+			tirage=[]
+			for i in range(n):
+				tirage.append( self.alea())
+			return (sum(tirage))/nom
+			
+p=Piece()
+print(p)
+print(p.moyenne(100))
+
+Expliquer en détail et commenter
+
+
+exercice 5:
+
+Ecrire une classe Temps qui définit un horaire sous forme hh:mm:ss
+et qui admet les méthodes suivantes:
+	affiche qui affiche l'horaire sous la forme "12 h 35 min 25 s"
+	__add__ qui ajoute deux horaires de cette classe
+	__sub__  qui calcule la différence entre deux horaires 
+	
+consulter la classe datetime de python
+
+
