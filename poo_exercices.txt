@@ -1,6 +1,7 @@
 OBJECT ORIENTED PROGRAMMING
 
-exercice 1 
+exercice 1
+
 Définir une classe identité telle que:
 si on tape
  hugo=Identite('Dupont','Hugo',1995)
@@ -15,13 +16,14 @@ si on tape
  1995
  30
  Que représentent nom,prenom,an et age?
- 
+ ###############################################
  exercice 2
+
  définir une classe Voiture telle que si on tape:
  F340=Voiture(4Ferrari','Blanche',90)
  print(F340)
   affiche: ' marque Ferrari de couleur Blanche de puissance 90 cv '
-  
+##############################################  
  exercice 3 
  
  class Special:
@@ -50,7 +52,7 @@ Qu'est ce qui sera affiché?
 Comment modifier ces instructions?
 Commenter le code 
 
-
+###############################################
 
 exercice 4:
 
@@ -71,7 +73,7 @@ print(p)
 print(p.moyenne(100))
 
 Expliquer en détail et commenter
-
+###############################################
 
 exercice 5:
 
@@ -82,7 +84,7 @@ et qui admet les méthodes suivantes:
 	__sub__  qui calcule la différence entre deux horaires 
 	
 consulter la classe datetime de python
-
+###############################################
 exercice 5:
 Ecrire une classe Fraction qui permet les instructions suivantes:
 f=Fraction(12,9)
@@ -96,6 +98,7 @@ g.denom -->3
 h=Fraction(48,36)
 f==h --> True  
 # dans la méthode __eq__
+###############################################
 
 
 
