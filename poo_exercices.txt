@@ -83,5 +83,20 @@ et qui admet les méthodes suivantes:
 	
 consulter la classe datetime de python
 
+exercice 5:
+Ecrire une classe Fraction qui permet les instructions suivantes:
+f=Fraction(12,9)
+f.num -->12
+f.denom --> 9
+g=Fraction(12,9).simplify()
+# on divise num et denom par pgcd(num,denom) 
+# pgcd(x,y)=pgcd(y,r) où x=qy+r r<y
+g.num -->4
+g.denom -->3
+h=Fraction(48,36)
+f==h --> True  
+# dans la méthode __eq__
+
+
 
 
