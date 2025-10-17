@@ -87,3 +87,4 @@ print(bulle1.bullesEnContact(bulle2))
 collision(2,3,mousse)
 print(donnePremierIndiceLibre(mousse))
     
+
