@@ -2,7 +2,7 @@
 """
 Created on Wed Oct 15 11:18:18 2025
 
-@author: jjcabon
+@author: eleve
 """
 
 from random import randint
@@ -22,16 +22,19 @@ class Cbulle:
         self.yc+=self.diry
         
     def distanceEntreBulles(self,B):
-        return sqrt((self.xc -B.xc)**2+(self.yc -B.yc)**2)
+        if self is not None and B is not None:
+            return sqrt((self.xc -B.xc)**2+(self.yc -B.yc)**2)
     def compare(self,B):
-        if self.rayon>B.rayon:
-            return
+        if self is not None and B is not None:
+            if self.rayon>B.rayon:
+                return
         
     def __str__(self):
         return f"centre ({self.xc},{self.yc}) de rayon {self.rayon} de couleur {self.couleur} et de vitesse ({self.dirx},{self.diry})"
     
     def bullesEnContact(self,B):
-        return self.distanceEntreBulles(B)<=(self.rayon+B.rayon)
+        if self is not None and B is not None:
+            return self.distanceEntreBulles(B)<=(self.rayon+B.rayon)
         
 
 bulle1=Cbulle()
@@ -86,5 +89,33 @@ def collision(indPetite,indGrosse,mousse):
 print(bulle1.bullesEnContact(bulle2))
 collision(2,3,mousse)
 print(donnePremierIndiceLibre(mousse))
-    
 
+
+for t in range(40):
+    k=donnePremierIndiceLibre(mousse)
+    if k<6:
+            bulle=Cbulle()
+            mousse[k]=bulle
+    for i in range(6):
+        mousse[i].bouge()
+        k=donnePremierIndiceLibre(mousse)
+        if k<6:
+            bulle=Cbulle()
+            mousse[k]=bulle
+        for j in range(6):
+            k=donnePremierIndiceLibre(mousse)
+            if k<6:
+                bulle=Cbulle()
+                mousse[k]=bulle
+            if j!=i:
+                if mousse[i].bullesEnContact(mousse[j]):
+                    if mousse[i].rayon<mousse[j].rayon:
+                        collision(i,j,mousse)
+                        print("collision",i,j)
+                    else:
+                        collision(j, i, mousse)
+        k=donnePremierIndiceLibre(mousse)
+        if k<6:
+            bulle=Cbulle()
+            mousse[k]=bulle
+    
