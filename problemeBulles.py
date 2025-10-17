@@ -90,7 +90,7 @@ print(bulle1.bullesEnContact(bulle2))
 collision(2,3,mousse)
 print(donnePremierIndiceLibre(mousse))
 
-
+#♦Simulation de 40 temps où chaque bulle avance et les collisions sont gérées et affichées
 for t in range(40):
     k=donnePremierIndiceLibre(mousse)
     if k<6:
@@ -119,3 +119,4 @@ for t in range(40):
             bulle=Cbulle()
             mousse[k]=bulle
     
+
