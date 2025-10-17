@@ -64,7 +64,7 @@ def placeBulle(B):
 
 placeBulle(bulle5)
 
-print(mousse[k])
+print(mousse[4])
 
 """while not(bulle3.bullesEnContact(bulle4)):
     bulle3.bouge()
@@ -119,4 +119,5 @@ for t in range(40):
             bulle=Cbulle()
             mousse[k]=bulle
     
+
 
