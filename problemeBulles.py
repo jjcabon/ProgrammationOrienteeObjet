@@ -2,7 +2,7 @@
 """
 Created on Wed Oct 15 11:18:18 2025
 
-@author: eleve
+@author: jjcabon
 """
 
 from random import randint
@@ -23,6 +23,9 @@ class Cbulle:
         
     def distanceEntreBulles(self,B):
         return sqrt((self.xc -B.xc)**2+(self.yc -B.yc)**2)
+    def compare(self,B):
+        if self.rayon>B.rayon:
+            return
         
     def __str__(self):
         return f"centre ({self.xc},{self.yc}) de rayon {self.rayon} de couleur {self.couleur} et de vitesse ({self.dirx},{self.diry})"
@@ -60,12 +63,18 @@ placeBulle(bulle5)
 
 print(mousse[k])
 
-print(bulle3.bullesEnContact(bulle4))
+"""while not(bulle3.bullesEnContact(bulle4)):
+    bulle3.bouge()
+    bulle4.bouge()"""
+    
+ 
+
+
 def collision(indPetite,indGrosse,mousse):
-    surfPetite=pi*mousse[indPetite];rayon**2
-    surfGrande=pi*mousse[indGrosse];rayon**2
+    surfPetite=pi*mousse[indPetite].rayon**2
+    surfGrande=pi*mousse[indGrosse].rayon**2
     surfGrosseApresCollision=surfGrande+surfPetite
-    mousse[indGrosse]=sqrt(surfGrosseApresCollision/pi)
+    mousse[indGrosse].rayon=sqrt(surfGrosseApresCollision/pi)
     mousse[indGrosse].dirx *=0.5
     mousse[indGrosse].diry *=0.5
     
@@ -74,5 +83,7 @@ def collision(indPetite,indGrosse,mousse):
     
     
     
-    print(bulle1.bullesEnContact(bulle2))
+print(bulle1.bullesEnContact(bulle2))
+collision(2,3,mousse)
+print(donnePremierIndiceLibre(mousse))
     
